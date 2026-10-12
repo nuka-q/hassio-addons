@@ -16,11 +16,10 @@ fi
 if bashio::var.has_value "$(bashio::config 'auth_token')"; then
   echo "  authtoken: $(bashio::config 'auth_token')" >> $configPath
 fi
-if bashio::var.has_value "$(bashio::config 'region')"; then
-  echo "  region: $(bashio::config 'region')" >> $configPath
-else
-  echo "No region defined, default region is US."
-fi
+# ngrok v3 does not accept the legacy region setting in the agent config.
+# If a region is required for a specific deployment, it must be configured through
+# a supported ngrok endpoint or account level setting instead.
+
 echo "" >> $configPath
 echo "tunnels:" >> $configPath
 for id in $(bashio::config "tunnels|keys"); do
@@ -42,10 +41,9 @@ for id in $(bashio::config "tunnels|keys"); do
   if [[ $inspect != "null" ]]; then
     echo "    inspect: $inspect" >> $configPath
   fi
-  auth=$(bashio::config "tunnels[${id}].auth")
-  if [[ $auth != "null" ]]; then
-    echo "    auth: $auth" >> $configPath
-  fi
+  # ngrok v3 no longer accepts the legacy basic-auth tunnel field.
+  # The add-on still retains the value in the HA config, but it is intentionally
+  # omitted here to keep the config compatible with the current ngrok agent.
   host_header=$(bashio::config "tunnels[${id}].host_header")
   if [[ $host_header != "null" ]]; then
     echo "    host_header: $host_header" >> $configPath
