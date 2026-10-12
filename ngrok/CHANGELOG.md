@@ -1,5 +1,9 @@
 ## Changes
 
+### 2.1.12
+
+- Allow HTTPS tunnel definitions in the add-on config so secure upstream services can be configured without triggering ERR_NGROK_3004
+
 ### 2.1.11
 
 - Fix ngrok v3 compatibility by removing unsupported legacy config fields and generating the proper agent config structure
