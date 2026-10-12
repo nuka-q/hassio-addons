@@ -1,5 +1,13 @@
 ## Changes
 
+### 2.1.14
+
+- Support HTTPS upstreams by allowing an `https://` LAN address in `addr`; keep `proto` set to `http`
+
+### 2.1.13
+
+- Remove unsupported `https` tunnel protocol option; ngrok tunnel protocol names are `http`, `tls`, and `tcp`
+
 ### 2.1.12
 
 - Allow HTTPS tunnel definitions in the add-on config so secure upstream services can be configured without triggering ERR_NGROK_3004
