@@ -1,4 +1,4 @@
-# Home Assistant Add-ons by dy1io
+# Home Assistant Add-ons
 
 ## About
 
@@ -16,7 +16,7 @@ Add the repository url listed below to your Supervisor Add-on Store tab in Home
 Assistant.
 
 ```txt
-https://github.com/dy1io/hassio-addons
+https://github.com/nuka-q/hassio-addons
 ```
 
 ## Thank you
