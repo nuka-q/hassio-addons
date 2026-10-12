@@ -1,5 +1,13 @@
 ## Changes
 
+### 2.1.10
+
+- Update the generated ngrok config to the v3 format required by the latest agent
+
+### 2.1.9
+
+- Update the addon to download the current ngrok v3 stable binary
+
 ### 2.1.8
 
 - Fix S6 error fixes [#12](https://github.com/dy1io/hassio-addons/issues/12)
