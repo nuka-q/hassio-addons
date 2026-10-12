@@ -1,6 +1,6 @@
 {
   "name": "ngrok Client",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "slug": "ngrok",
   "description": "A ngrok client for Hass.io",
   "init": false,

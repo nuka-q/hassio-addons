@@ -1,5 +1,9 @@
 ## Changes
 
+### 2.1.11
+
+- Fix ngrok v3 compatibility by removing unsupported legacy config fields and generating the proper agent config structure
+
 ### 2.1.10
 
 - Update the generated ngrok config to the v3 format required by the latest agent
